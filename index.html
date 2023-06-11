@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin&family=Oswald:wght@200&family=Roboto+Slab:wght@100;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <script src="main.js" defer></script>
+
+    <title class="titulo" style="background-color: #373C4E">CONTROLE DE FRETES</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">CONTROLE DE FRETES</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar <img src="icons8-file-64.png"
+                width="45px"></button>
+
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>ID Frete</th>
+                    <th>Data</th>
+                    <th>Nome Empresa</th>
+                    <th>Local Destino</th>
+                    <th>Quilometragem</th>
+                    <th>Valor Pago</th>
+                    <th>Valor gasto</th>
+                    <th>Total Líquido</th>
+                    <th class="action" style="background-color:#5b5854">Ação</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+
+                    <h2 style="color:#5b5854">NOVO CADASTRO</h2>
+
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+
+                <form id="form" class="modal-form">
+
+                    <input type="number" id="ID_Frete" data="new" class="modal-field" placeholder="ID Frete" required>
+
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome Empresa"
+                        required>
+
+                    <input type="date" id="data" data="new" class="modal-field" placeholder="Data" required>
+
+                    <input type="text" id="local" class="modal-field" placeholder="Cidade de Destino" required>
+
+                    <input type="number" id="km" data="new" class="modal-field" placeholder="Quilometragem" required>
+
+                    <input type="number" id="vlr pago" data="new" class="modal-field" placeholder="Valor Pago" required>
+
+                    <input type="number" id="vlr gasto" data="new" class="modal-field" placeholder="Valor Gasto"
+                        required>
+
+                    <input type="number" id="total" data="new" class="modal-field" placeholder="Total Líquido" required>
+
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar <img src="icons8-folder-64 (1).png"
+                            width="40px"></button>
+                    <button id="cancelar" class="button blue">Cancelar <img src="icons8-x-men-64.png"
+                            width="40px"></button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+
+
+</html>
